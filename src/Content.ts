@@ -1,6 +1,7 @@
 ﻿import fs from "fs";
 import http from "http";
 import url from "url";
+import Megoldás from "./megoldás";
 
 interface InputInterface {
     name: string;
@@ -27,7 +28,7 @@ export default class Content {
         res.write("<body><form><pre>");
 
         // Kezd a kódolást innen -->
-
+        const megoldás = new Megoldás("egyszamjatek.txt");
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
